@@ -5,10 +5,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Categories.class)
-@Categories.IncludeCategory(br.com.restassuredapitesting.suites.AcceptanceTests.class)
+@Categories.IncludeCategory(br.com.restassuredapitesting.suites.AcceptanceExceptionTests.class)
 @Suite.SuiteClasses({
-        AcceptanceTest.class
 
 })
-public class AcceptanceTest {
+public class AcceptanceExceptionTests {
 }

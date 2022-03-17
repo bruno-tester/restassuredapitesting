@@ -5,9 +5,9 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
 @RunWith(Categories.class)
-@Categories.IncludeCategory(br.com.restassuredapitesting.suites.SmokeTests.class)
 @Suite.SuiteClasses({
-
+        SchemaCriticalTests.class,
+        SchemaExceptionTests.class
 })
-public class SmokeTests {
+public class SchemaTests {
 }
