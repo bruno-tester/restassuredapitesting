@@ -1,14 +1,12 @@
-package br.com.restassuredapitesting.tests.ping.tests;
+package br.com.restassuredapitesting.tests;
 
 import br.com.restassuredapitesting.base.BaseTest;
-import br.com.restassuredapitesting.suites.AllTests;
-import br.com.restassuredapitesting.tests.ping.requests.GetPingRequest;
+import requests.ping.GetPingRequest;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
-import org.junit.experimental.categories.Category;
 
 @Feature("Feature - Api online")
 public class GetPingTest extends BaseTest {
@@ -17,7 +15,6 @@ public class GetPingTest extends BaseTest {
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
-    @Category({AllTests.class})
     @DisplayName("Verificar se a Api está online")
     public void validaApiOnline(){
 

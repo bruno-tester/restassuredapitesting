@@ -1,4 +1,4 @@
-package br.com.restassuredapitesting.tests.booking.payloads;
+package payloads;
 
 import org.json.JSONObject;
 

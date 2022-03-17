@@ -1,7 +1,8 @@
-package br.com.restassuredapitesting.tests.booking.requests;
+package requests.booking;
 
 
-import br.com.restassuredapitesting.tests.booking.payloads.BookingPayloads;
+import io.restassured.RestAssured;
+import payloads.BookingPayloads;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 
@@ -12,7 +13,7 @@ public class PutBookingRequest {
 
     @Step("Atualiza uma reserva específica com o parâmetro token")
     public Response updateBookingToken(int id, String token){
-        return given()
+        return RestAssured.given()
                 .header("Content-Type", "application/json")
                 .header("Accept","application/json")
                 .header("Cookie",token)

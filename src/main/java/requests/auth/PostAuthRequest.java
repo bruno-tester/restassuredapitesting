@@ -1,10 +1,9 @@
-package br.com.restassuredapitesting.tests.auth.requests;
+package requests.auth;
 
-import br.com.restassuredapitesting.tests.auth.requests.payloads.AuthPayloads;
 import io.qameta.allure.Step;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.given;
+import payloads.AuthPayloads;
 
 public class PostAuthRequest {
     AuthPayloads authPayloads = new AuthPayloads();
@@ -12,7 +11,7 @@ public class PostAuthRequest {
     @Step("Retorna o token")
     public Response tokenReturn(){
 
-        return given()
+        return RestAssured.given()
                 .header("Content-Type","application/json")
                 .when()
                 .body(authPayloads.jsonAuthLogin().toString())
